@@ -35,6 +35,22 @@
 
 		]
 
+		var ContactItem = React.createClass({
+
+			protoTypes: {
+				name: React.ProtoTypes.string.isRequired,
+				email: React.ProtoTypes.string.isRequired,
+				description: React.ProtoTypes.string,
+			},
+
+			render: function(){
+				return (
+
+					)
+			}
+
+		}),
+
 		var listElements = contacts.filter(function(contact) {return contact.email; }).map (function(contact){
 			return React.createElement('li', {key: contact.key},
 				React.createElement('h2', {}, contact.name),
