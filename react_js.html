@@ -17,13 +17,13 @@
 
 	<script type="text/javascript">
 		var contacts = [
-			{key:1, name: 'James K Nelson', email: 'james@jamesknelson.com', description: 'Front-end Unicorn'},
+			{key:1, name: 'James K Nelson', email: 'james@jamesknelson.com', description: 'Front-end Unicorn', photo: 'minions.jpg' },
 
-			{key:2, name: 'Jim', email:'jim@example.com'},
+			{key:2, name: 'Jim', email:'jim@example.com', photo: 'cat_unicorn.jpeg'},
 
 			{key:3, name: 'Joe'},
 
-			{key:4, name: 'Fatima K Khalilova', email: 'fkk@gmail.com', description: 'Front-end Wannabe Unicorn'},
+			{key:4, name: 'Fatima K Khalilova', email: 'fkk@gmail.com', description: 'Front-end Wannabe Unicorn', photo: 'giphy-facebook_s.jpg'},
 
 		]
 
@@ -33,13 +33,15 @@
 				name: React.PropTypes.string.isRequired,
 				email: React.PropTypes.string.isRequired,
 				description: React.PropTypes.string,
+				photo: React.PropTypes.string,
 			},
 
 			render: function(){
 				return (
 					React.createElement('li', {},
 						React.createElement('h2', {}, this.props.name),
-						React.createElement('a',{href: 'mailto' + this.props.email}, this.props.email)
+						React.createElement('a',{href: 'mailto' + this.props.email}, this.props.email),
+						React.createElement ('img', {src: this.props.photo})
 						)
 
 					)
